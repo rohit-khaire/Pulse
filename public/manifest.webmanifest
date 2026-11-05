@@ -1,0 +1,25 @@
+{
+  "name": "Pulse: Har ball ka matlab",
+  "short_name": "Pulse",
+  "description": "Second-screen cricket fantasy companion. Explains what every ball did to your team, in Hinglish, Hindi or English.",
+  "id": "/",
+  "start_url": "/match?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "lang": "en",
+  "categories": ["sports", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Open match replay", "url": "/match", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "90-second judge tour", "url": "/match?demo=1", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

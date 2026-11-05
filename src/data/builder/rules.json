@@ -1,0 +1,12 @@
+{
+  "_comment": "IMPORTANT: verify against Dream11's CURRENT in-app rules before relying on this. These values were cross-checked only against third-party and ICC/Dream11-partner pages (e.g. 100 credits, 11 players, max 7 from one team, WK 1-4, BAT 3-6, AR 1-4, BOWL 3-6) and Dream11 can change them per sport/tournament. This file is configuration only: edit here, no code change needed.",
+  "teamSize": 11,
+  "creditBudget": 100,
+  "maxPerTeam": 7,
+  "roles": {
+    "WK": { "min": 1, "max": 4 },
+    "BAT": { "min": 3, "max": 6 },
+    "AR": { "min": 1, "max": 4 },
+    "BOWL": { "min": 3, "max": 6 }
+  }
+}

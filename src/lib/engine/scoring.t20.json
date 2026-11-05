@@ -1,0 +1,57 @@
+{
+  "version": "t20-dream11-2024",
+  "playingXI": 4,
+  "batting": {
+    "run": 1,
+    "four": 4,
+    "six": 6,
+    "duck": -2,
+    "milestones": [
+      { "runs": 25, "pts": 4 },
+      { "runs": 50, "pts": 8 },
+      { "runs": 75, "pts": 12 },
+      { "runs": 100, "pts": 16 }
+    ],
+    "milestoneMode": "highestOnly"
+  },
+  "bowling": {
+    "dot": 1,
+    "wicket": 30,
+    "lbwBowled": 8,
+    "maiden": 12,
+    "hauls": [
+      { "wkts": 3, "pts": 4 },
+      { "wkts": 4, "pts": 8 },
+      { "wkts": 5, "pts": 12 }
+    ],
+    "haulMode": "highestOnly"
+  },
+  "fielding": {
+    "catch": 8,
+    "catchBonusAt": 3,
+    "catchBonus": 4,
+    "stumping": 12,
+    "runOutDirect": 12,
+    "runOutIndirect": 6
+  },
+  "economy": {
+    "enabled": true,
+    "minOvers": 2,
+    "tiers": [
+      { "lt": 5, "pts": 6 },
+      { "gte": 5, "lt": 6, "pts": 4 },
+      { "gte": 6, "lte": 7, "pts": 2 },
+      { "gte": 10, "lte": 11, "pts": -2 },
+      { "gt": 11, "lte": 12, "pts": -4 },
+      { "gt": 12, "pts": -6 }
+    ]
+  },
+  "strikeRate": {
+    "enabled": false
+  },
+  "multipliers": {
+    "C": 2,
+    "VC": 1.5
+  }
+}
+

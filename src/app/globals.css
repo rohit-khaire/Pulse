@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* ── Theme tokens ───────────────────────────────────────────────────────────
+   - slate-500/600 are lifted so small muted text meets WCAG AA (4.5:1) on the
+     slate-800/900/950 surfaces (stock slate-500 is only 3.7:1 on slate-900).
+   - slate-750/850 were used across the app but do not exist in Tailwind; defining
+     them restores the intended shades instead of silently rendering nothing.
+   - --breakpoint-xs: the app uses `xs:` classes that Tailwind v4 does not ship. */
+@theme {
+  --color-slate-500: #8493a8;
+  --color-slate-600: #7f8ea3;
+  --color-slate-750: #273449;
+  --color-slate-850: #162033;
+  --breakpoint-xs: 23.5rem;
+}
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), var(--font-devanagari), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none; /* no pull-to-refresh yank mid-match */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keyboard focus is always visible and high-contrast */
+:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+input[type="range"]:focus-visible { outline-offset: 0; }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #fbbf24;
+  color: #020617;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.skip-link:focus { top: 0.75rem; }
+
+/* Custom scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* ── Skeletons ────────────────────────────────────────────────────────────── */
+@keyframes pulse-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.pulse-skeleton {
+  background-image: linear-gradient(90deg, rgba(30,41,59,0.0) 0%, rgba(51,65,85,0.45) 50%, rgba(30,41,59,0.0) 100%);
+  background-size: 200% 100%;
+  animation: pulse-shimmer 1.6s ease-in-out infinite;
+}
+
+/* ── Entrance helpers (components already use these tailwindcss-animate style names) ── */
+@keyframes pulse-enter {
+  from { opacity: 0; transform: translateY(var(--enter-y, 0)); }
+  to { opacity: 1; transform: none; }
+}
+.animate-in { animation: pulse-enter 200ms ease-out both; }
+.slide-in-from-bottom-6 { --enter-y: 1.5rem; }
+.slide-in-from-top-1 { --enter-y: -0.25rem; }
+
+/* Long timelines: let the browser skip layout/paint for off-screen cards */
+.pulse-cv {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 9rem;
+}
+.pulse-below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 40rem;
+}
+
+/* ── Landing hero demo + tour ─────────────────────────────────────────────── */
+@keyframes pulse-progress { from { width: 0%; } to { width: 100%; } }
+.tour-progress { animation-name: pulse-progress; animation-timing-function: linear; animation-fill-mode: forwards; }
+.tour-spot { transition: top 250ms ease, left 250ms ease, width 250ms ease, height 250ms ease; }
+
+@keyframes pulse-flash { 0%,100% { box-shadow: 0 0 0 0 rgba(244,63,94,0); } 40% { box-shadow: 0 0 0 6px rgba(244,63,94,0.35); } }
+.hero-flash { animation: pulse-flash 900ms ease-out 1; }
+
+/* ── Reduced motion: honour the OS setting everywhere ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tour-progress, .reel-bar-active {
+    animation-duration: inherit !important;
+  }
+  .pulse-skeleton { animation: none; background-image: none; }
+}

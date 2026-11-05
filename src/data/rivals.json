@@ -1,0 +1,83 @@
+[
+  {
+    "id": "rival-1",
+    "name": "Aman's XI",
+    "owner": "Aman Sharma",
+    "xi": [
+      "MA Agarwal",
+      "KL Rahul",
+      "AK Markram",
+      "YBK Jaiswal",
+      "LS Livingstone",
+      "MK Lomror",
+      "Kartik Tyagi",
+      "Arshdeep Singh",
+      "C Sakariya",
+      "Mustafizur Rahman",
+      "DJ Hooda"
+    ],
+    "c": "MA Agarwal",
+    "vc": "Kartik Tyagi"
+  },
+  {
+    "id": "rival-2",
+    "name": "Bunty 11",
+    "owner": "Bunty",
+    "xi": [
+      "YBK Jaiswal",
+      "SV Samson",
+      "E Lewis",
+      "KL Rahul",
+      "N Pooran",
+      "R Tewatia",
+      "Mohammed Shami",
+      "Arshdeep Singh",
+      "Kartik Tyagi",
+      "Harpreet Brar",
+      "CH Morris"
+    ],
+    "c": "YBK Jaiswal",
+    "vc": "Mohammed Shami"
+  },
+  {
+    "id": "rival-3",
+    "name": "Sharmaji Ka Beta",
+    "owner": "Rohan Sharma",
+    "xi": [
+      "SV Samson",
+      "KL Rahul",
+      "MA Agarwal",
+      "E Lewis",
+      "LS Livingstone",
+      "CH Morris",
+      "Mohammed Shami",
+      "Mustafizur Rahman",
+      "C Sakariya",
+      "Harpreet Brar",
+      "FA Allen"
+    ],
+    "c": "SV Samson",
+    "vc": "KL Rahul"
+  },
+  {
+    "id": "rival-4",
+    "name": "Gully Cricketers",
+    "owner": "Vikram Singh",
+    "xi": [
+      "E Lewis",
+      "MK Lomror",
+      "R Parag",
+      "KL Rahul",
+      "MA Agarwal",
+      "DJ Hooda",
+      "Arshdeep Singh",
+      "AU Rashid",
+      "Kartik Tyagi",
+      "CH Morris",
+      "IC Porel"
+    ],
+    "c": "E Lewis",
+    "vc": "Arshdeep Singh"
+  }
+]
+
