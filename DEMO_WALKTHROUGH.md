@@ -60,7 +60,7 @@ Use this script during live demonstrations or video submissions. Open `http://lo
 >
 > *The AI model is strictly forbidden from computing scores or ranks. All numbers are computed by our deterministic TypeScript engine and verified through a sentence-level streaming guard. If an unverified number appears, the response is discarded and replaced with a verified template instantly.*
 >
-> *We prove this through our **102-case Golden Evaluation Suite** on `/evals`, achieving **100% Numeric Faithfulness**, **100% Refusal Recall** against betting and injection prompts, and **87.3% live Groq pass rate** with a sub-millisecond offline router fallback.*
+> *We prove this through our **102-case Golden Evaluation Suite** on `/evals`, achieving **100% Numeric Faithfulness**, **100% Refusal Recall** against betting and injection prompts, and a live Groq run that passed 102/102, with a sub-millisecond offline router handling most answers (only 4 were written by the model; `/evals` shows the split).*
 >
 > *Pulse is fast, resilient, authentic, and battle-tested with 375 passing automated tests."*
 

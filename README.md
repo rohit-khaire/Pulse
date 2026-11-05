@@ -90,7 +90,7 @@ The hardest problem in sports AI is hallucination—models inventing fantasy poi
 - **102 Golden Eval Suite:** Test cases covering factual stats, multi-step queries, adversarial injections, betting refusals, and edge cases across English, Hinglish, and Hindi.
 - **100% Numeric Faithfulness Invariant:** The AI model is strictly prohibited from doing math. Every single number in an answer must exist in a whitelist produced by deterministic tool executions.
 - **100% Refusal Recall:** Immediate, polite blocking of betting tips, financial predictions, and prompt injection attacks.
-- **Live Model Benchmark:** Calibrated with Groq tool-calling (`openai/gpt-oss-120b` primary, `openai/gpt-oss-20b` fallback) delivering an **87.3% live pass rate** backed by a **0.5ms sub-millisecond local router** fallback.
+- **Live Model Benchmark:** Calibrated with Groq tool-calling (`openai/gpt-oss-120b` primary, `openai/gpt-oss-20b` fallback) backed by a **0.5ms sub-millisecond local router**. In the last live run all 102 cases passed; the rest were safely replaced by the deterministic engine (see `/evals` for the exact split).
 
 ---
 
@@ -131,7 +131,7 @@ Experience the entire platform through the interactive 5-stage tour:
                                     ▼
 ┌────────────────────────────────────────────────────────────────────────┐
 │                   Groq Tool-Calling Model Fallback Chain               │
-│   Primary: openai/gpt-oss-120b  │ Fallbacks: openai/gpt-oss-20b, Qwen  │
+│   Primary: openai/gpt-oss-120b  │ Fallbacks: openai/gpt-oss-20b, qwen3.8-27b │
 │          Offline/Rate-Limit Circuit Breaker: Sub-ms Template           │
 └────────────────────────────────────────────────────────────────────────┘
 ```

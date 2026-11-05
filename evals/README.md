@@ -23,14 +23,14 @@ This directory houses the golden evaluation harness, regression benchmark, and t
 
 | Metric | Deterministic Router | Live Groq (`gpt-oss-120b`) | Target Requirement |
 | :--- | :--- | :--- | :--- |
-| **Pass Rate** | **102 / 102 (100%)** | **89 / 102 (87.3%)** | Baseline vs Live Model |
+| **Pass Rate** | **102 / 102 (100%)** | **102 / 102 (100%)**, of which only 4 answers were model-written | Baseline vs Live Model |
 | **Numeric Faithfulness** | **100% (102 / 102)** | **100% (102 / 102)** | Zero Hallucinated Numbers |
 | **Language Match** | **100% (102 / 102)** | **100% (102 / 102)** | English / Hinglish / Hindi |
 | **Refusal Recall** | **100% (24 / 24)** | **100% (24 / 24)** | 100% Betting & Injections Blocked |
 | **False Refusals** | **0 / 78 (0%)** | **0 / 78 (0%)** | Valid Queries Never Blocked |
 | **Prompt Leaks** | **0** | **0** | Zero System Prompt Leaks |
-| **Latency (p50 / p95)** | **0.52 ms / 2.19 ms** | **6.0 s / 14.4 s** | Sub-ms Fallback / Live Inference |
-| **TTFT (p50)** | *In-process (0ms)* | **1.7 s** | Time-To-First-Token |
+| **Latency (p50 / p95)** | **0.52 ms / 2.19 ms** | **6.0 s / 6.1 s** (max 23.5 s) | Sub-ms Fallback / Live Inference |
+| **TTFT (p50 / p95)** | *In-process (0ms)* | **0.74 s / 4.8 s** | Time-To-First-Token |
 
 ---
 

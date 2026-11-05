@@ -8,20 +8,17 @@
 ## 📋 The 200-Word Submission Note (Copy-Paste for Google Form)
 
 ```text
-What fan problem are you solving?
-During live IPL matches, Dream11 fans watch their leaderboard ranks swing wildly but have no visibility into why. Standard scorecards show raw points, leaving fans confused when taking a wicket drops their rank because a rival’s captain took the catch. Fans lack real-time clarity on what every ball means for their specific XI and whether they can still win.
+Fan problem: During a live match, a Dream11 fan sees their rank jump or crash but not why. Was it my captain, a rival's catch, an overthrow? And in the death overs: "can I still win?" Broadcast commentary is written for neutral viewers, mostly in English, not for my XI.
 
-How does your solution help?
-Pulse is an AI live match companion that transforms raw ball-by-ball deliveries into personalized fantasy intelligence:
-1. Instant Ball Nudges: Explains point swings and rival leaderboard impacts in English, Hinglish, and Hindi.
-2. Zero-Math AI: Deterministic engines compute points, milestones, and DRS rules; AI strictly narrates verified numbers without hallucination.
-3. Path to Victory: Real-time simulation showing plausible wicket/boundary combinations needed to overtake rivals.
-4. Social Banter & Moments Reel: One-tap shareable stories of clutch match turnarounds.
+How it helps: Pulse is a second-screen companion replaying a real IPL match (RR vs PBKS) ball by ball. It explains each rank swing in plain Hinglish, Hindi or English, answers "catch me up" and "why was that out?", and simulates what my team needs to reach #1. Before the match, a builder creates a legal 11 under Dream11's rules in Floor, Ceiling or Differential modes.
 
-Which AI tools did you use?
-Groq Cloud LPUs with AI SDK for ultra-low latency streaming (sub-200ms TTFT), multi-model fallbacks (GPT-OSS-120B/20B, Qwen-2.5), deterministic template fallbacks for offline resilience, and Vitest for continuous numeric guardrail verification.
+Trust by design: the AI never does math. Points and ranks come from deterministic code; every number in an AI answer is checked against those results, else a template answer replaces it. Betting questions are refused. 102 test cases are on /evals.
+
+AI tools: Groq (gpt-oss-120b with gpt-oss-20b fallback) via the Vercel AI SDK for tool-calling; Claude for building and reviewing the code.
+
+Link: <your Render URL>/match?demo=1
 ```
-*(Word count: 187 words — strictly compliant with the 200-word limit)*
+*(Word count: 183, under the 200-word limit)*
 
 ---
 
